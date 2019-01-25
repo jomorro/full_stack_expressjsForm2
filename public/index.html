@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Create User</title>
+</head>
+
+<body>
+    <section>
+        <form id="user-create-form" action="./api/user" method="post">
+            <fieldset>
+                <legend>User Info</legend>
+
+                <!-- Add user input fields here -->
+                <p>
+                    <label for="username">username</label>
+                    <input type="text" name="username" id="username" placeholder="username" autofocus>
+                </p>
+
+                <p>
+                    <label for="email">email address</label>
+                    <input type="email" name="email" id="email" placeholder="email address">
+                </p>
+
+                <p>
+                    <label for="pay-rate">Pay rate</label>
+                    <input type="number" id="pay-rate" name="pay-rate" disabled>
+                </p>
+
+                <p>
+                    <label for="zip-code">zip code</label>
+                    <input type="text" name="zip-code" id="zip-code" placeholder="zip code">
+                </p>
+
+
+                <p>
+                    <label for="mobile-number">mobile phone number</label>
+                    <input type='tel' id='modile-number' name='mobile-number'>
+                </p>
+
+                <p>
+                    <label for='social-profile'>social media link</label>
+                    <input type='url' id='social-profile' name='social-profile'>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>What is your preferred communication method?</legend>
+
+                <p>
+                    <label for="cell-preferred-radio">cell phone</label>
+                    <input type='radio' id='cell-preferred-radio' name='preferred-contact-method-selector' value='cell'>
+                </p>
+
+                <p>
+                    <label for='email-preferred-radio'>email</label>
+                    <input type='radio' id='email-preferred-radio' name='preferred-contact-method-selector' value='email'>
+                </p>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>What devices do you use?</legend>
+                <p>
+                    <label for="ios-checkbox">iOS</label>
+                    <input type='checkbox' id='ios-checkbox' name='user-devices' value='ios'>
+                </p>
+                <p>
+                    <label for="android-checkbox">android</label>
+                    <input type='checkbox' id='android-checkbox' name='user-devices' value='android'>
+                </p>
+
+                <p>
+                    <label for='mac-checkbox'>mac</label>
+                    <input type='checkbox' id='mac-checkbox' name='user-devices' value='mac'>
+                </p>
+
+                <p>
+                    <label for='windows-checkbox'>windows</label>
+                    <input type='checkbox' id='windows-checkbox' name='user-devices' value='windows'>
+                </p>
+
+                <p>
+                    <label for='linux-checkbox'>linux</label>
+                    <input type='checkbox' id='linux-checkbox' name='user-devices' value='linux'>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Important Stuff</legend>
+                <p>
+                    <label for='user-type'>User Type</label>
+                    <select id="user-type" name="user-type">
+                        <option value="user">User</option>
+                        <option value="moderator">Moderator</option>
+                        <option value='administrator'>Administrator</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="fav-color">favorite color</label>
+                    <input type="color" name="fav-color" id="fav-color">
+                </p>
+            </fieldset>
+
+            <button type="submit">Create User</button>
+            <button type="reset">Reset!</button>
+
+        </form>
+
+        <p id="submission-status"></p>
+    </section>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
